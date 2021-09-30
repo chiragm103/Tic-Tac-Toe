@@ -7,7 +7,11 @@ function selectWinnerBoxes(b1, b2, b3) {
     b1.classList.add("win");
     b2.classList.add("win");
     b3.classList.add("win");
-    document.getElementById("turn").innerHTML = b1.innerHTML + " is the winner!";
+    if(b1.innerHTML == "X")
+    document.getElementById("turn").innerHTML = "You Won!";
+    else
+    document.getElementById("turn").innerHTML = "Computer Won!";
+
     document.getElementById("turn").style.fontSize = "30px";
     result = true;
 }
