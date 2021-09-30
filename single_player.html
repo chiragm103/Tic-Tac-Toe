@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tic Tac Toe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="TicTacToe.css">
+  <script src="single_player.js"></script>
+</head>
+
+<body>
+
+  <!----------------------Navbar------------------------->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid" style="height: 60px;">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active h2" style="text-decoration: none; margin-top: 10px;" href="index.html">Tic Tac
+            Toe</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!---------------------Navbar ends--------------------------->
+
+
+  <div id="turn">
+    You are playing against computer!
+  </div>
+  <div id="grid" sytle="margin-top: 10px;">
+    <button class="box" onclick="setbox('box1')" style="border-left: 0; border-top: 0" id="box1"></button>
+    <button class="box" onclick="setbox('box2')" style="border-top: 0" id="box2"></button>
+    <button class="box" onclick="setbox('box3')" style="border-top: 0; border-right: 0" id="box3"></button>
+    <button class="box" onclick="setbox('box4')" style="border-left: 0" id="box4"></button>
+    <button class="box" onclick="setbox('box5')" id="box5"></button>
+    <button class="box" onclick="setbox('box6')" style="border-right: 0" id="box6"></button>
+    <button class="box" onclick="setbox('box7')" style="border-left: 0; border-bottom: 0" id="box7"></button>
+    <button class="box" onclick="setbox('box8')" style="border-bottom: 0" id="box8"></button>
+    <button class="box" onclick="setbox('box9')" style="border-right: 0; border-bottom: 0" id="box9"></button>
+  </div>
+
+  <div class="container text-center" style="margin-top: 30px;">
+    <a href="index.html" style="margin-right: 10px;" type="button" class="btn btn-primary"> Home </a>
+    <button type="button" onclick="reset()"  class="btn btn-success">Reset</button>
+  </div>
+</body>
+
+</html>
