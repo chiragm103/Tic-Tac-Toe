@@ -3,12 +3,14 @@ var X_or_O = 0;
 var result = false;
 var count = 0;
 
-function selectWinnerBoxes(b1, b2, b3) {
-    b1.classList.add("win");
-    b2.classList.add("win");
-    b3.classList.add("win");
-    document.getElementById("turn").innerHTML = "Computer Won!";
+function selectWinnerBoxes(b1, b2, b3) 
+{
+    b1.classList.add("loss");
+    b2.classList.add("loss");
+    b3.classList.add("loss");
+    document.getElementById("turn").innerHTML = "You Lost!";
     document.getElementById("turn").style.fontSize = "30px";
+    document.getElementById("turn").style.color = "red";
     result = true;
 }
 
@@ -80,11 +82,12 @@ function setbox(pos) {
 
 function reset() {
     for (var i = 1; i <= 9; i++) {
-        document.getElementById("box" + i).classList.remove("win");
+        document.getElementById("box" + i).classList.remove("loss");
         document.getElementById("box" + i).innerHTML = "";
     }
     document.getElementById("turn").innerHTML = "Start Playing!";
     document.getElementById("turn").style.fontSize = "20px";
+    document.getElementById("turn").style.color = "green";
     result = false;
     count = 0;
     X_or_O = 0;
